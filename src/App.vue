@@ -1,16 +1,21 @@
 <template>
-<MyHeader :socials="socials" :navItems="navItems" logo="img/classic_shop_logo2x.png"/>
+  <div>
+    <MyHeader :socials="socials" :navItems="navItems" logo="img/classic_shop_logo2x.png"/>
+    <MyMain/>
+  </div>
 </template>
 
 <script>
 import MyHeader from './components/MyHeader.vue'
+import MyMain from './components/MyMain.vue'
 function navItem (text) {
   return { icon: 'fa-solid fa-angle-down', text }
 }
 export default {
   name: 'App',
   components: {
-    MyHeader
+    MyHeader,
+    MyMain
   },
   data: function () {
     return {
