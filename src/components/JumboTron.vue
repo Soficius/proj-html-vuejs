@@ -7,7 +7,7 @@
 <script>
 export default {
   name: 'JumboTron',
-  props: ['background', 'height', 'align', 'justify', 'color'],
+  props: ['background', 'height', 'align', 'justify', 'color', 'bpos'],
   computed: {
     jumboStyle () {
       return {
@@ -15,7 +15,8 @@ export default {
         height: this.height || '200px',
         alignItems: this.align || '',
         justifyContent: this.justify || '',
-        color: this.color || ''
+        color: this.color || '',
+        backgroundPosition: this.bpos || 'center'
       }
     }
   }
@@ -26,7 +27,6 @@ export default {
   .jumbotron{
     display: flex;
     background-repeat: no-repeat;
-    background-position: center;
     background-size: cover;
   }
 </style>
