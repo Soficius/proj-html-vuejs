@@ -91,8 +91,15 @@
       </div>
       </JumboTron>
     </div>
+    <!-- bestSellersImgs section -->
+    <div class="container text-center py-5">
+      <h3>Best Seller</h3>
+      <p>Must have products from our top sellers</p>
+    </div>
+    <div class="container w-75">
+      <MySlider :images="bestSellersImgs"></MySlider>
+    </div>
 
-    <div>separooooooooooooooooo</div>
     <!--  offers section-->
     <JumboTron
     background="img/bkgd_confetti-compressor.jpg"
@@ -131,9 +138,17 @@
         </JumboTron>
       </div>
     </JumboTron>
+    <!-- New Arrivals section -->
+    <div class="container text-center py-5">
+      <h3>New Arrivals</h3>
+      <p>Must have products from our top sellers</p>
+    </div>
+    <div class="container-fluid pb-5">
+      <MySlider :images="bestSellersImgs"></MySlider>
+    </div>
 
     <!--  testimonials section -->
-    <div>separooooooooooooooooo</div>
+
      <JumboTron
       background="img/testimonials_home_1_bg.jpg"
       height="520px"
@@ -228,10 +243,11 @@
 <script>
 import JumboTron from './JumboTron.vue'
 import RateReview from './RateReview.vue'
+import MySlider from './MySlider.vue'
 export default {
   name: 'MyMain',
-  components: { JumboTron, RateReview },
-  props: ['featured', 'blogs', 'reviewFeaturedItems', 'logos', 'reviewSaleItems', 'reviewRateItems', 'reviewLatestItems']
+  components: { JumboTron, RateReview, MySlider },
+  props: ['bestSellersImgs', 'featured', 'blogs', 'reviewFeaturedItems', 'logos', 'reviewSaleItems', 'reviewRateItems', 'reviewLatestItems']
 }
 </script>
 <style lang="scss">

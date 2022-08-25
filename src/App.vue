@@ -3,9 +3,12 @@
     <MyHeader :socials="socials" :navItems="navItems" logo="img/classic_shop_logo2x.png"/>
     <MyMain :featured="featured" :blogs="blogs"
     :reviewFeaturedItems="reviewFeaturedItems"
+    :bestSellersImgs="bestSellersImgs"
     :logos="logos" :reviewSaleItems="reviewSaleItems"
     :reviewRateItems="reviewRateItems" :reviewLatestItems=" reviewLatestItems"/>
-    <MyFooter :socials="socials" :topProducts="topProducts" :recentPost="recentPost" :tags="tags"/>
+    <MyFooter
+    :socials="socials" :topProducts="topProducts"
+    :recentPost="recentPost" :tags="tags"/>
   </div>
 </template>
 
@@ -78,6 +81,15 @@ export default {
         'lines', 'multi-purpose', 'New York', 'Outdoors',
         'red', 'responsive', 'summer', 'sweater', 'Travel',
         'Warm', 'White', 'Winter'
+      ],
+      bestSellersImgs: [
+        'img/black_elegant_leather_jacket.jpg',
+        'img/blue_jacket_and_white_stripe_tee.jpg',
+        'img/blue_leather_jacket.jpg',
+        'img/hipster_black_top.jpg',
+        'img/modern_black_leather_suit.jpg',
+        'img/modern_love_tee.jpg',
+        'img/spring_printed_dress.jpg'
       ]
     }
   }

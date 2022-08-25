@@ -48,11 +48,15 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+@import '../assets/scss/vars.scss';
+a.rounded-pill.bg-primary{
+  background-color: $color_primary !important;
+}
 .height-c{
-    height: 100px;
+  height: 100px;
 }
 .active{
- border-top: 2px solid blue
+ border-top: 2px solid $color_primary
 }
 </style>
