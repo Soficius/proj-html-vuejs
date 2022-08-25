@@ -63,9 +63,9 @@ export default {
       ],
       logos: ['img/b_logotype_6.png', 'img/b_logotype_7.png', 'img/b_logotype_1.png', 'img/b_logotype_2.png', 'img/b_logotype_3.png'],
       topProducts: [
-        { img: 'img/leather_gloves-120x156.jpg', starts: '5', newPrice: '45', title: 'Leather Gloves' },
-        { img: 'img/black_elegant_leather_jacket-120x156.jpg', starts: '5', newPrice: '200', oldPrice: '235', title: 'Black Leather Jacket' },
-        { img: 'img/spring_printed_dress-120x156.jpg', title: 'Spring Printed Dress', newPrice: '47', starts: 5 }
+        { img: 'img/leather_gloves-120x156.jpg', stars: '5', newPrice: '45', title: 'Leather Gloves' },
+        { img: 'img/black_elegant_leather_jacket-120x156.jpg', stars: '5', newPrice: '200', oldPrice: '235', title: 'Black Leather Jacket' },
+        { img: 'img/spring_printed_dress-120x156.jpg', title: 'Spring Printed Dress', newPrice: '47', stars: 5 }
       ],
       recentPost: [
         'Aenean lobortis sapien enim viverra',

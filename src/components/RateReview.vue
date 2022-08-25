@@ -15,7 +15,7 @@ export default {
 @import '../assets/scss/vars.scss';
 .e-primary{
     color: transparent;
-    text-shadow: 0 0 0 $color_primary;
+    text-shadow: 0 0 0 $color_blu;
 }
 .e-white{
     color: transparent;

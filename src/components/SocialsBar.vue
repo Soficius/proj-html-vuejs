@@ -1,7 +1,8 @@
 <template>
     <ul :class="ul">
         <li :class="li" v-for="(social,i) in socials" :key="'social-'+i">
-            <a :class="a" href="#"><font-awesome-icon :icon="social" /></a>
+            <a v-if="nav" class="nav-link" href="#"><font-awesome-icon :icon="social" /></a>
+            <font-awesome-icon v-else :icon="social" />
         </li>
     </ul>
 </template>
