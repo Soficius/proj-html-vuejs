@@ -2,11 +2,7 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-light border-1 border-bottom">
     <div class="container">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item" v-for="(social,i) in socials" :key="'social-'+i">
-            <a class="nav-link" href="#"><font-awesome-icon :icon="social" /></a>
-            </li>
-        </ul>
+        <SocialsBar :socials="socials"/>
         <span class="navbar-text mr-3">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
@@ -41,12 +37,14 @@
 </template>
 
 <script>
+import SocialsBar from './SocialsBar.vue'
 export default {
   name: 'MyHeader',
   props: ['socials', 'logo', 'navItems'],
   data: function () {
     return { activeItem: 0 }
-  }
+  },
+  components: { SocialsBar }
 }
 </script>
 

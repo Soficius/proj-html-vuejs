@@ -147,20 +147,105 @@
          <p>Darío Pineda, Theme Fusion</p>
       </div>
     </JumboTron>
+    <!-- blogs section -->
+    <div class="container text-center py-5">
+      <h1>From Our Blog</h1>
+      <p>The Latest Classic Shop News</p>
+    </div>
+    <div class="d-flex justify-content-center container pb-5" >
+      <div v-for="(blog,i) in blogs" :key="'blogs-'+i" class="d-flex flex-column pe-5" >
+        <img :src="blog.img" :alt="blog.title">
+        <h5>{{blog.title}}</h5>
+        <p>{{blog.data}} | {{blog.comments.length}} Comments</p>
+        <p>{{blog.description}}</p>
+    </div>
+    </div>
+    <!-- section review -->
+    <div class="container d-flex flex-row border-top border-1 py-5">
+      <div class="container d-flex flex-column my-width">
+        <h4>Featured</h4>
+        <div class="d-flex flex-row my-height w-100 justify-content-between border-1 border-bottom pb-3" v-for="(item,i) in reviewFeaturedItems" :key="'rfi-'+i">
+          <p>
+            <span>{{item.description}}</span>
+            <span v-if="item.stars"><RateReview class="w-100 d-block" :rate="item.stars"/></span>
+            <span v-if="item.oldPrice"><del>{{item.oldPrice}}€</del></span>
+            &nbsp;&nbsp;
+            <span>{{item.newPrice}}€</span>
+          </p>
+          <img :src="item.img" :alt="item.description" class="h-100">
+        </div>
+      </div>
+      <div class="container d-flex flex-column  my-width">
+        <h4>On Sale</h4>
+        <div class="d-flex flex-row my-height w-100 justify-content-between border-1 border-bottom pb-3" v-for="(item,i) in reviewSaleItems" :key="'rsi-'+i">
+          <p>
+            <span>{{item.description}}</span>
+            <span v-if="item.stars"><RateReview class="w-100 d-block" :rate="item.stars"/></span>
+            <span v-if="item.oldPrice"><del>{{item.oldPrice}}€</del></span>
+            &nbsp;&nbsp;
+            <span>{{item.newPrice}}€</span>
+          </p>
+          <img :src="item.img" :alt="item.description" class="h-100">
+        </div>
+      </div>
+      <div class="container d-flex flex-column  my-width">
+        <h4>Top Rated</h4>
+        <div class="d-flex flex-row my-height w-100 justify-content-between border-1 border-bottom pb-3" v-for="(item,i) in reviewRateItems" :key="'rri-'+i">
+          <p>
+            <span>{{item.description}}</span>
+            <span v-if="item.stars"><RateReview class="w-100 d-block" :rate="item.stars"/></span>
+            <span v-if="item.oldPrice"><del>{{item.oldPrice}}€</del></span>
+            &nbsp;&nbsp;
+            <span>{{item.newPrice}}€</span>
+          </p>
+          <img :src="item.img" :alt="item.description" class="h-100">
+        </div>
+      </div>
+      <div class="container d-flex flex-column  my-width">
+            <h4>Latest Review</h4>
+            <div class="d-flex flex-row my-height w-100 justify-content-between border-1 border-bottom pb-3" v-for="(item,i) in reviewLatestItems" :key="'rli-'+i">
+                <p>
+                <span>{{item.description}}</span>
+                <span v-if="item.stars"><RateReview class="w-100 d-block" :rate="item.stars"/></span>
+                <span v-if="item.oldPrice"><del>{{item.oldPrice}}€</del></span>
+                &nbsp;&nbsp;
+                <span>{{item.newPrice}}€</span>
+              </p>
+              <img :src="item.img" :alt="item.description" class="h-100">
+            </div>
+      </div>
+    </div>
+    <!-- brand logos -->
+    <div class="container-fluid text-center bg-color-gray">
+      <h5 class="py-4">Brand Logos</h5>
+      <div class="d-flex container justify-content-around">
+        <img v-for="(logo,i) in logos" :key="'logos-'+i" :src="logo" alt="">
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 import JumboTron from './JumboTron.vue'
+import RateReview from './RateReview.vue'
 export default {
   name: 'MyMain',
-  components: { JumboTron },
-  props: ['featured']
+  components: { JumboTron, RateReview },
+  props: ['featured', 'blogs', 'reviewFeaturedItems', 'logos', 'reviewSaleItems', 'reviewRateItems', 'reviewLatestItems']
 }
 </script>
 <style lang="scss">
 @import '../assets/scss/vars.scss';
 .man-testimonial{
   width: 6em;
+}
+.my-width{
+  width: calc(100%/4);
+}
+.bg-color-gray{
+background-color: $color_light;
+}
+.my-height{
+  height: 6em;
 }
 </style>
