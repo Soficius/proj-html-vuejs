@@ -2,7 +2,7 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-light border-1 border-bottom">
     <div class="container">
-        <SocialsBar :socials="socials"/>
+        <SocialsBar :socials="socials" nav/>
         <span class="navbar-text mr-3">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">

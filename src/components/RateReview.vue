@@ -1,6 +1,6 @@
 <template>
 <span>
-  <span v-for="n in 5" :key="'s'-n" :class="n <= rate ? 'e-primary' : 'e-white'">★</span>
+  <span v-for="n in 5" :key="'s-'+n" :class="n <= rate ? 'e-primary' : 'e-white'">★</span>
 </span>
 </template>
 

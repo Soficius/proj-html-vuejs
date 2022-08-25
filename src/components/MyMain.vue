@@ -31,8 +31,8 @@
       <!-- images products section -->
       <div class="d-flex justify-content-center">
         <figure v-for="(item,i) in featured" :key="'featured-'+i">
-          <div class="d-flex flex-column">
-            <img :src="item.img" :alt="item.title">
+          <div class="d-flex flex-column pe-3 text-start">
+            <img :src="item.img" :alt="item.title" style="height:260px;width:200px">
             <h5>{{item.title}}</h5>
             <p>{{item.tags}}</p>
             <p>
@@ -163,7 +163,7 @@
     <!-- section review -->
     <div class="container d-flex flex-row border-top border-1 py-5">
       <div class="container d-flex flex-column my-width">
-        <h4>Featured</h4>
+        <h5>Featured</h5>
         <div class="d-flex flex-row my-height w-100 justify-content-between border-1 border-bottom pb-3" v-for="(item,i) in reviewFeaturedItems" :key="'rfi-'+i">
           <p>
             <span>{{item.description}}</span>
@@ -176,11 +176,12 @@
         </div>
       </div>
       <div class="container d-flex flex-column  my-width">
-        <h4>On Sale</h4>
+        <h5>On Sale</h5>
         <div class="d-flex flex-row my-height w-100 justify-content-between border-1 border-bottom pb-3" v-for="(item,i) in reviewSaleItems" :key="'rsi-'+i">
           <p>
             <span>{{item.description}}</span>
             <span v-if="item.stars"><RateReview class="w-100 d-block" :rate="item.stars"/></span>
+            &nbsp;
             <span v-if="item.oldPrice"><del>{{item.oldPrice}}€</del></span>
             &nbsp;&nbsp;
             <span>{{item.newPrice}}€</span>
@@ -189,7 +190,7 @@
         </div>
       </div>
       <div class="container d-flex flex-column  my-width">
-        <h4>Top Rated</h4>
+        <h5>Top Rated</h5>
         <div class="d-flex flex-row my-height w-100 justify-content-between border-1 border-bottom pb-3" v-for="(item,i) in reviewRateItems" :key="'rri-'+i">
           <p>
             <span>{{item.description}}</span>
@@ -202,7 +203,7 @@
         </div>
       </div>
       <div class="container d-flex flex-column  my-width">
-            <h4>Latest Review</h4>
+            <h5>Latest Review</h5>
             <div class="d-flex flex-row my-height w-100 justify-content-between border-1 border-bottom pb-3" v-for="(item,i) in reviewLatestItems" :key="'rli-'+i">
                 <p>
                 <span>{{item.description}}</span>
@@ -216,7 +217,7 @@
       </div>
     </div>
     <!-- brand logos -->
-    <div class="container-fluid text-center bg-color-gray">
+    <div class="container-fluid text-center bg-color-gray py-4">
       <h5 class="py-4">Brand Logos</h5>
       <div class="d-flex container justify-content-around">
         <img v-for="(logo,i) in logos" :key="'logos-'+i" :src="logo" alt="">
@@ -224,7 +225,6 @@
     </div>
   </div>
 </template>
-
 <script>
 import JumboTron from './JumboTron.vue'
 import RateReview from './RateReview.vue'
